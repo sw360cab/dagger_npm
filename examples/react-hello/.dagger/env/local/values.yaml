@@ -1,0 +1,30 @@
+plan:
+    package: ./plans/local
+name: local
+inputs:
+    app.source:
+        dir:
+            path: .
+    dockerSocket:
+        socket:
+            unix: /var/run/docker.sock
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1lucpn9q6y478lsf5zqxsl904yrkjqctsep825j2fg66uy49zpa8q4wvpzv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBhOTRCUkdQdm5RbmZjN28w
+            aTh3WTBlV3NuV1lDNHM4dWs1RmVPL3daY25FCnhpcHN6MTV6RTVTbzk3dDFkNW14
+            aWRjSzNvN2lBc2l1eE0wdmV2WjBlWW8KLS0tIHpvOTgvRmlqSW9TcUhYOUdMeUgw
+            dWtFa3NjWFZBbFVucUYwUklUdlJnamsKxvzwLk0ZVTWjHMyGXac4xgwl5b7EQ798
+            TqPY4fFI8/bd013EhzSpXiEBfXIOxuZHCkjgwT/rZaUb49IquiqU6A==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2021-11-18T11:54:32Z"
+    mac: ENC[AES256_GCM,data:n3klU6eNSLpc8zf7R2bepQ/UvG0I/e5yXe/QqpIRT5+CuJ90H9FsjP3EdKQBnI7DSDf6oSD3W6LBk8R5W/DPtf708zY4kUEHq52gVk2Gbq84Ti/EZ6pPeDp26dkDjjU1rQ7OUfHlXWF8wsXoaWrssseMdG4Zg6gtmIlM1nCEk6w=,iv:iaDa5Bu3TrFhUD0E1djb8Etex8PHPBrEZAKkczyYkV8=,tag:b6WIMkFqRz6ATUt6ue1a/Q==,type:str]
+    pgp: []
+    encrypted_suffix: secret
+    version: 3.7.1

@@ -76,13 +76,14 @@ import (
 
 			opts=( $(echo $NPM_ARGS) )
 			npm run "$NPM_BUILD_SCRIPT" --prefix "$NPM_CWD" --cache "$NPM_CACHE_FOLDER" ${opts[@]}
-			mv ${NPM_CWD}/node_modules /node_modules
+			mv ${NPM_CWD}/${NPM_BUILD_DIRECTORY} /node_modules
 			"""
 		"env": env & {
 			NPM_BUILD_SCRIPT:    script
 			NPM_ARGS:            strings.Join(args, "\n")
 			NPM_CACHE_FOLDER:    "/cache/npm"
 			NPM_CWD:             cwd
+			NPM_BUILD_DIRECTORY: buildDir
 			if writeEnvFile != "" {
 				ENVFILE_NAME: writeEnvFile
 				ENVFILE:      strings.Join([ for k, v in env {"\(k)=\(v)"}], "\n")
