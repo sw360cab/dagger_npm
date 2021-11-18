@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-* Dagger installed
+* Dagger [installed](https://docs.dagger.io/1001/install/)
 
 ## Running tests
 
@@ -21,7 +21,7 @@ dagger init
 dagger new local -p ./plans/local
 # add inputs
 dagger -e local input socket dockerSocket /var/run/docker.sock
-dagger -e local input dir app.source ./
+dagger -e local input dir repository ./
 # run
 dagger -e local up
 ```

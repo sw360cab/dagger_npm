@@ -1,0 +1,27 @@
+plan:
+    package: ./plans
+name: staging
+inputs:
+    app.source:
+        dir:
+            path: .
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1lucpn9q6y478lsf5zqxsl904yrkjqctsep825j2fg66uy49zpa8q4wvpzv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBJU0hBRlVucGZTa1UxczJ0
+            RzFSc0pKNkNzNzk5eWR1R3ViMzV5cllsaDI0Cmlvc3FZL2dyMzR1NXN1UDl5U0E5
+            aUZ6V1ZHQnptYUo2SVFFRVJSOHB2V00KLS0tIE90SU0xd3FUR0ZrV0NEU24xdmZo
+            eURjbEZIcHZJdm53b0hobE9pamY4aUEKmXfDtX79LtdxyFdtl9Xu/lhfB4GPZumn
+            zCGvaRBlUAAt4jkKq2jgp2SIaETrVl7FrCXR+u24IfiimfwqhCW7KA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2021-11-15T14:01:49Z"
+    mac: ENC[AES256_GCM,data:o5dhDoPvAknDarUt0KzPolK0mPNkFQTDQIhiiFNrkSyH5OHPZ9D03SAv8SYMJmNlUxtRUwQkYFWxU/Wiz06Oy+L3vwfk57zPddN8RGaNDKkmsYSYgas7i6lLgbRpOOCaQC/xiueZhOE4yowGL+hFzioRkwa7DmEN8VsibqMXNmc=,iv:4ez1xopPnTpjeybmGO8k23Fsr8cMZcXWHAnQ3zTIBaA=,tag:bZor/egXSRppdqwntFMhEg==,type:str]
+    pgp: []
+    encrypted_suffix: secret
+    version: 3.7.1
