@@ -21,7 +21,7 @@ dagger init
 dagger new local -p ./plans/local
 # add inputs
 dagger -e local input socket dockerSocket /var/run/docker.sock
-dagger -e local input dir repository ./
+dagger -e local input dir repository ./ # for React example: dir app.source ./
 # run
 dagger -e local up
 ```

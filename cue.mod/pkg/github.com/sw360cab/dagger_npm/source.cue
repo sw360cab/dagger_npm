@@ -32,7 +32,7 @@ import (
 
 	// Read build output from this directory
 	// (path must be relative to working directory)
-	// buildDir: string | *"/node_modules" @dagger(input)
+	buildDir: string | *"/node_modules" @dagger(input)
 
 	// Run this npm script
 	script: string | *"install" @dagger(input)

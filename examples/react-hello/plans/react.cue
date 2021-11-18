@@ -1,4 +1,4 @@
-package todoapp
+package reactapp
 
 import (
 	"alpha.dagger.io/dagger"
@@ -10,8 +10,8 @@ import (
 // Build the source code using Yarn
 app: dagger_npm.#Package & {
 	source: dagger.#Artifact & dagger.#Input
-	script: build
-	buildDir: build
+	script: "build"
+	buildDir: "build"
 }
 
 // package the static HTML from yarn into a Docker image

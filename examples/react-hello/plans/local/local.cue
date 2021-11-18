@@ -1,4 +1,4 @@
-package nodejs
+package reactapp
 
 import (
 	"alpha.dagger.io/dagger"
@@ -11,8 +11,8 @@ dockerSocket: dagger.#Stream & dagger.#Input
 // run our nodejs-hello in our local Docker engine
 run: docker.#Run & {
 	ref: push.ref
-	name: "react-hello-run"
-	ports: ["8000:5000"]
+	name: "react-hello"
+	ports: ["8080:80"]
 	socket: dockerSocket
 }
 
@@ -27,7 +27,7 @@ registry: docker.#Run & {
 // push to our local registry
 // this concrete value satisfies the string constraint
 // we defined in the previous file
-push: target: "localhost:5042/raect-hello"
+push: target: "localhost:5042/react-hello"
 
 // Application URL
-appURL: "http://localhost:8000/" & dagger.#Output
+appURL: "http://localhost:8080/" & dagger.#Output
